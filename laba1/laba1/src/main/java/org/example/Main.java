@@ -16,7 +16,7 @@ public class Main {
             //System.out.println("File name: ");//C:\Users\acer\Desktop\laba1\laba1\src\main\java\org\example\input.txt
             Scanner scanner = new Scanner(System.in);
             //String path = scanner.nextLine();
-            String path = "input11.txt";
+            String path = "C:\\Users\\acer\\Desktop\\laba1\\laba1\\src\\main\\java\\org\\example\\input.txt";
             //String path = args[0];
             File myFile = new File(path);
             Scanner Reader = new Scanner(myFile);
@@ -46,9 +46,7 @@ public class Main {
 
 
         } catch (FileNotFoundException e) {
-            //System.out.println("File not found")
-            System.out.println(e.getMessage());
-            //e.printStackTrace();
+            System.out.println("File not found");
         }
     }
     //Перевірка умови на довжину слова
@@ -88,7 +86,7 @@ public class Main {
     }
 
     //перевіряєио чи є літреа приголосною
-    private static boolean isConsonant(char c)
+    public static boolean isConsonant(char c)
     {
         return !(c == 'a' || c == 'e' || c == 'i'
                 || c == 'o' || c == 'u' || c == 'y');
@@ -96,7 +94,7 @@ public class Main {
 
     // Знаходимо довжину найдовшого підланцюжка
     // приголосних літер
-    private static int longestConsonant(String str)
+    public static int longestConsonant(String str)
     {
         int count = 0, res = 0;
         char[] s = str.toCharArray();

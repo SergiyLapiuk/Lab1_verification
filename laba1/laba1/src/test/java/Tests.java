@@ -46,11 +46,8 @@ public class Tests {
         };
     }
 
-    @Test
-    public void testMainFileNotFound() {
-        Exception exception = assertThrows(FileNotFoundException.class, () -> Main.main(new String[]{}));
-        assertEquals("input11.txt (The system cannot find the file specified)", exception.getMessage());
-    }
+    @Test public void testException() {
+        assertThrows(NullPointerException.class, () -> Main.longestConsonant(null));}
 
     @BeforeEach
     public void setUp() {
